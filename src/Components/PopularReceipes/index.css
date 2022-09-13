@@ -1,0 +1,32 @@
+*{
+    font-family: 'Poppins';
+}
+
+.fast-heading{
+    color: #FF7E00;
+    font-weight: 700;
+}
+
+.food-delivery-heading{
+    color: #2F2F2F;
+    font-weight: 700;
+}
+
+.order-now-btn{
+    border-radius: 84px;
+    background: #2F2F2F;
+
+}
+
+@media screen and (min-width: 767px){
+    .fast-heading{
+        font-size: 125px;
+       
+    }
+    .food-delivery-heading{
+        font-size: 52px;
+      
+    }
+    
+
+}
