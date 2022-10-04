@@ -14,32 +14,31 @@ import { BsFillCartFill } from "react-icons/bs";
 export default function Header() {
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="transparent">
+      <Navbar collapseOnSelect expand="lg" bg="primary" className='mb-5'  fixed="top">
         <Container fluid>
-          <Navbar.Brand href="#home" className='align-items-baseline'>
+          <Navbar.Brand href="#home" className='d-flex  justify-content-around align-items-baseline'>
             <img src='./Images/NavbarLogo.png' className='logo me-2' alt='logo' />
             NEOFood
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav d-flex justify-content-center" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="navigation-links">
+            <Nav className="navigation-links me-lg-3 ms-5">
               <Nav.Link as={Link} to="/">PopularReceipe</Nav.Link>
               <Nav.Link as={Link} to="/GetReceipes">GetReceipes</Nav.Link>
               <Nav.Link as={Link} to="/CalorieReceipe">CalorieReceipe</Nav.Link>
               <Nav.Link as={Link} to="/MealPlanner">MealPlanner</Nav.Link>
             </Nav>
-          </Navbar.Collapse>
-          <div >
+            <div className='d-flex ms-lg-3' >
             <Form className="d-flex">
-              <div className='d-flex align-items-center rounded-pill shadow search-bar p-1'>
+              <div className='d-flex align-items-center justify-content-between rounded-pill shadow search-bar p-1'>
                 <AiOutlineSearch size={24} />
                 <Form.Control
                   type="search"
                   placeholder="Search"
-                  className="me-3 bg-transparent border-0"
+                  className="me-2 bg-transparent border-0 search-input"
                   aria-label="Search"
                 />
-                <Link to="/Cart"><BsFillCartFill size={22} className="text-dark" /></Link>
+                <Link to="/Cart"><BsFillCartFill size={20} className="text-dark" /></Link>
                 <sup>
                   <Badge
                     bg="danger"
@@ -53,6 +52,8 @@ export default function Header() {
 
             </Form>
           </div>
+          </Navbar.Collapse>
+          
         </Container >
       </Navbar>
 
